@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const USERS = "http://localhost:4000/users";
-const PURCHASES = "http://localhost:4000/purchases";
+const USERS = "https://edu-platform-backend-9j95.onrender.com/users";
+const PURCHASES = "https://edu-platform-backend-9j95.onrender.com/purchases";
 
 export const purchaseCourse = async (userId, courseId) => {
   // 1) satın alma kaydı oluştur
@@ -27,7 +27,7 @@ export const getMyCourses = async (userId) => {
   const user = await axios.get(`${USERS}/${userId}`);
   const courseIds = user.data.purchasedCourses || [];
 
-  const allCourses = await axios.get("http://localhost:4000/courses");
+  const allCourses = await axios.get("https://edu-platform-backend-9j95.onrender.com/courses");
 
   return allCourses.data.filter((c) => courseIds.includes(c.id));
 };

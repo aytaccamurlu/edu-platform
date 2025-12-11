@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:4000/courses";
+const API = "https://edu-platform-backend-9j95.onrender.com/courses";
 
 export const getCourses = async () => {
   const res = await axios.get(API);

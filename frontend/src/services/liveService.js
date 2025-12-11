@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const LIVE = "http://localhost:4000/liveRequests";
-const INSTRUCTORS = "http://localhost:4000/instructors";
+const LIVE = "https://edu-platform-backend-9j95.onrender.com/liveRequests";
+const INSTRUCTORS = "https://edu-platform-backend-9j95.onrender.com/instructors";
 
 export const sendLiveRequest = async (userId, courseId, preferredTime) => {
   // 1) canlı ders isteği kaydet

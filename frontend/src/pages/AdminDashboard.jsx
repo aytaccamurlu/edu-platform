@@ -14,7 +14,7 @@ import {
   DialogContent,
   DialogActions,
 } from "@mui/material";
-
+import Header from "../components/Header";
 export default function AdminDashboard() {
   const [courses, setCourses] = useState([]);
   const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ export default function AdminDashboard() {
   // Kursu sil
   const handleDelete = async (id) => {
     if (window.confirm("Bu kursu silmek istediğinize emin misiniz?")) {
-      await axios.delete(`http://localhost:4000/courses/${id}`);
+      await axios.delete(`https://edu-platform-backend-9j95.onrender.com/courses/${id}`);
       loadCourses();
     }
   };
@@ -61,9 +61,9 @@ export default function AdminDashboard() {
   // Form submit (ekleme/güncelleme)
   const handleSubmit = async () => {
     if (editingCourse) {
-      await axios.put(`http://localhost:4000/courses/${editingCourse.id}`, form);
+      await axios.put(`https://edu-platform-backend-9j95.onrender.com/courses/${editingCourse.id}`, form);
     } else {
-      await axios.post("http://localhost:4000/courses", form);
+      await axios.post("https://edu-platform-backend-9j95.onrender.com/courses", form);
     }
     setOpen(false);
     loadCourses();
@@ -71,6 +71,7 @@ export default function AdminDashboard() {
 
   return (
     <Box p={3}>
+      <Header  />
       <Typography variant="h4" mb={3}>
         Admin Paneli
       </Typography>

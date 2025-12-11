@@ -25,7 +25,7 @@ export default function InstructorDashboard() {
   // Talebi tamamla
   const handleComplete = async (id) => {
     try {
-      await axios.patch(`http://localhost:4000/liveRequests/${id}`, { status: "completed" });
+      await axios.patch(`https://edu-platform-backend-9j95.onrender.com/liveRequests/${id}`, { status: "completed" });
       // UI’yi anında güncelle
       setLiveRequests(prev => prev.filter(r => r.id !== id));
       alert("Talep tamamlandı!");

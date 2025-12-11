@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Box, Button, TextField, Typography, Alert } from "@mui/material";
-
+import Header from "../components/Header";
 export default function LiveRequest() {
   const [courseId, setCourseId] = useState("");
   const [message, setMessage] = useState("");
@@ -50,6 +50,7 @@ export default function LiveRequest() {
 
   return (
     <Box p={3} maxWidth={400} mx="auto">
+      <Header />
       <Typography variant="h5" mb={3}>
         Canlı Ders Talebi Oluştur
       </Typography>
