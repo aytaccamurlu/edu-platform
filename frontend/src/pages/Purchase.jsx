@@ -1,0 +1,49 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+export default function Purchase() {
+  const [course, setCourse] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const selected = localStorage.getItem("selectedCourse");
+    if (!selected) {
+      alert("Satın alınacak kurs bulunamadı!");
+      navigate("/courses");
+      return;
+    }
+    setCourse(JSON.parse(selected));
+  }, []);
+
+  const handlePayment = async () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) { alert("Giriş yapın!"); navigate("/login"); return; }
+
+    const purchaseData = {
+      userId: user.id,
+      courseId: course.id,
+      price: course.price,
+      status: "success",
+      date: new Date().toISOString()
+    };
+
+    await axios.post("https://edu-platform-backend-9j95.onrender.com/purchases", purchaseData);
+
+    alert("Ödeme başarılı! Kurs hesabınıza tanımlandı.");
+    localStorage.removeItem("selectedCourse");
+    navigate("/my-courses");
+  };
+
+  if (!course) return null;
+
+  return (
+    <div style={{ padding: 40 }}>
+      <Header title="Ödeme Sayfası" />
+      <h2>Ödeme Sayfası</h2>
+      <h3>{course.title}</h3>
+      <p>Fiyat: ₺{course.price}</p>
+      <button onClick={handlePayment} style={{ marginTop: 20 }}>Ödemeyi Tamamla</button>
+    </div>
+  );
+}

@@ -1,0 +1,366 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ali",
+      "role": "user",
+      "email": "ali@test.com",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "name": "Ayşe",
+      "role": "instructor",
+      "email": "ayse@test.com",
+      "password": "123"
+    },
+    {
+      "id": "3",
+      "name": "Admin",
+      "role": "admin",
+      "email": "admin@test.com",
+      "password": "123"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "React 101",
+      "desc": "React giriş eğitimi",
+      "instructor": "Ayşe",
+      "price": 199,
+      "duration": 12,
+      "contents": [
+        {
+          "title": "Giriş",
+          "detail": "React nedir, kurulum"
+        },
+        {
+          "title": "Component Yapısı",
+          "detail": "Fonksiyonel ve Class Componentler"
+        },
+        {
+          "title": "State ve Props",
+          "detail": "State yönetimi ve props kullanımı"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Node.js Başlangıç",
+      "desc": "Backend temelleri",
+      "instructor": "Ayşe",
+      "price": 249,
+      "duration": 15,
+      "contents": [
+        {
+          "title": "Giriş",
+          "detail": "Node.js nedir, kurulum"
+        },
+        {
+          "title": "Modüller",
+          "detail": "require ve import kullanımı"
+        },
+        {
+          "title": "Express",
+          "detail": "Route ve middleware oluşturma"
+        }
+      ]
+    },
+    {
+      "id": "79b4",
+      "title": "SQL",
+      "desc": "Veritabanı Yönetimi",
+      "price": 300,
+      "duration": 10,
+      "contents": [
+        {
+          "title": "Giriş",
+          "detail": "SQL nedir ve temel kavramlar"
+        },
+        {
+          "title": "SELECT Sorguları",
+          "detail": "Veri çekme ve filtreleme"
+        },
+        {
+          "title": "JOIN İşlemleri",
+          "detail": "Tablolar arası ilişki kurma"
+        },
+        {
+          "title": "Veri Güncelleme",
+          "detail": "UPDATE ve DELETE kullanımı"
+        },
+        {
+          "title": "İleri Konular",
+          "detail": "Index ve performans optimizasyonu"
+        }
+      ]
+    }
+  ],
+  "purchases": [
+    {
+      "id": "2f4b",
+      "userId": "1",
+      "courseId": "1",
+      "status": "paid"
+    },
+    {
+      "id": "381f",
+      "userId": "1",
+      "courseId": "2",
+      "status": "paid"
+    },
+    {
+      "id": "ba12",
+      "userId": "1",
+      "courseId": "2",
+      "status": "paid"
+    },
+    {
+      "id": "4a96",
+      "userId": "1",
+      "courseId": "1",
+      "status": "paid"
+    },
+    {
+      "id": "5c4f",
+      "userId": "1",
+      "courseId": "1",
+      "status": "paid"
+    },
+    {
+      "id": "7028",
+      "userId": "1",
+      "courseId": "1",
+      "status": "paid"
+    },
+    {
+      "id": "0ab8",
+      "userId": "1",
+      "courseId": "1",
+      "status": "paid"
+    },
+    {
+      "id": "0440",
+      "userId": "1",
+      "courseId": "1",
+      "status": "paid"
+    },
+    {
+      "id": "7038",
+      "userId": "1",
+      "courseId": "2",
+      "status": "paid"
+    },
+    {
+      "id": "1e61",
+      "userId": "1",
+      "courseId": "79b4",
+      "status": "paid"
+    }
+  ],
+  "liveRequests": [
+    {
+      "id": "4854",
+      "userId": "1",
+      "status": "completed"
+    },
+    {
+      "id": "5c69",
+      "userId": "1",
+      "status": "completed"
+    },
+    {
+      "id": "3368",
+      "userId": "1",
+      "status": "completed"
+    },
+    {
+      "id": "ba6d",
+      "userId": "1",
+      "status": "completed"
+    },
+    {
+      "id": "8757",
+      "userId": "1",
+      "status": "completed"
+    },
+    {
+      "id": "a5b6",
+      "userId": "1",
+      "status": "completed"
+    },
+    {
+      "id": "5804",
+      "userId": "1",
+      "status": "completed"
+    },
+    {
+      "id": "1e82",
+      "userId": "1",
+      "status": "pending"
+    },
+    {
+      "id": "caad",
+      "userId": "1",
+      "courseId": 1,
+      "status": "assigned",
+      "date": "2025-12-10T19:19:18.081Z",
+      "instructorId": "2"
+    },
+    {
+      "id": "f092",
+      "userId": "1",
+      "courseId": 2,
+      "status": "pending",
+      "date": "2025-12-10T19:21:06.433Z"
+    },
+    {
+      "id": "f227",
+      "userId": "1",
+      "courseId": 3,
+      "status": "pending",
+      "date": "2025-12-10T19:21:12.808Z"
+    },
+    {
+      "id": "a21c",
+      "userId": "1",
+      "courseId": 1,
+      "status": "pending",
+      "date": "2025-12-10T19:21:21.712Z"
+    },
+    {
+      "id": "3e25",
+      "userId": "1",
+      "courseId": 2,
+      "status": "pending",
+      "date": "2025-12-10T19:22:45.096Z"
+    },
+    {
+      "id": "28f9",
+      "userId": "1",
+      "courseId": 2,
+      "status": "assigned",
+      "date": "2025-12-10T19:24:02.928Z",
+      "instructorId": "1"
+    },
+    {
+      "id": "71c8",
+      "userId": "1",
+      "courseId": 3,
+      "status": "assigned",
+      "date": "2025-12-10T19:24:10.000Z",
+      "instructorId": "2"
+    },
+    {
+      "id": "3d86",
+      "userId": "1",
+      "courseId": 1,
+      "status": "assigned",
+      "date": "2025-12-10T19:24:16.536Z",
+      "instructorId": "3"
+    },
+    {
+      "id": "6580",
+      "userId": "1",
+      "courseId": 0,
+      "status": "pending",
+      "date": "2025-12-10T19:24:22.128Z"
+    },
+    {
+      "id": "a313",
+      "userId": "1",
+      "courseId": 4,
+      "status": "pending",
+      "date": "2025-12-10T19:24:29.544Z"
+    },
+    {
+      "id": "dcb2",
+      "userId": "1",
+      "courseId": 1,
+      "status": "completed",
+      "date": "2025-12-10T19:26:14.984Z"
+    },
+    {
+      "id": "e8bf",
+      "userId": "1",
+      "courseId": 1,
+      "status": "assigned",
+      "date": "2025-12-10T19:27:11.192Z",
+      "instructorId": "1"
+    },
+    {
+      "id": "0090",
+      "userId": "1",
+      "courseId": 1,
+      "status": "assigned",
+      "date": "2025-12-10T19:27:14.400Z",
+      "instructorId": "2"
+    },
+    {
+      "id": "ab36",
+      "userId": "1",
+      "courseId": 1,
+      "status": "assigned",
+      "date": "2025-12-11T06:32:35.802Z",
+      "instructorId": "1"
+    },
+    {
+      "id": "9fe3",
+      "userId": "1",
+      "courseId": 2,
+      "status": "assigned",
+      "date": "2025-12-11T06:32:41.523Z",
+      "instructorId": "1"
+    },
+    {
+      "id": "da28",
+      "userId": "1",
+      "courseId": null,
+      "status": "assigned",
+      "date": "2025-12-11T06:32:44.179Z",
+      "instructorId": "1"
+    },
+    {
+      "id": "f1fc",
+      "userId": "1",
+      "courseId": 1,
+      "status": "assigned",
+      "date": "2025-12-11T06:32:46.532Z",
+      "instructorId": "1"
+    },
+    {
+      "id": "2821",
+      "userId": "1",
+      "courseId": 3,
+      "status": "assigned",
+      "date": "2025-12-11T06:32:49.265Z",
+      "instructorId": "1"
+    },
+    {
+      "id": "0a7a",
+      "userId": "1",
+      "courseId": 1,
+      "status": "assigned",
+      "date": "2025-12-11T07:11:11.665Z",
+      "instructorId": "1"
+    }
+  ],
+  "instructors": [
+    {
+      "id": "1",
+      "name": "Hasan",
+      "isAvailable": true
+    },
+    {
+      "id": "2",
+      "name": "Ayşe",
+      "isAvailable": true
+    },
+    {
+      "id": "3",
+      "name": "Adnan",
+      "isAvailable": true
+    }
+  ]
+}
