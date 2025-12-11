@@ -23,7 +23,7 @@ export default function LiveRequest() {
       });
 
       // 2. Eğitmen atama
-      const instructorsRes = await axios.get("http://localhost:4000/instructors");
+      const instructorsRes = await axios.get("https://edu-platform-backend-9j95.onrender.com/instructors");
       const availableInstructor = instructorsRes.data.find(inst => inst.isAvailable);
 
       if (!availableInstructor) {
@@ -32,10 +32,10 @@ export default function LiveRequest() {
       }
 
       // Eğitmen atandı
-      await axios.patch(`http://localhost:4000/instructors/${availableInstructor.id}`, { isAvailable: true });
+      await axios.patch(`https://edu-platform-backend-9j95.onrender.com/instructors/${availableInstructor.id}`, { isAvailable: true });
 
       // Talebi güncelle
-      await axios.patch(`http://localhost:4000/liveRequests/${request.data.id}`, {
+      await axios.patch(`https://edu-platform-backend-9j95.onrender.com/liveRequests/${request.data.id}`, {
         instructorId: availableInstructor.id,
         status: "assigned"
       });
